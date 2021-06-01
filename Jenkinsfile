@@ -10,7 +10,7 @@ pipeline {
       }
       stage ('mavenBuild') {
           steps {
-        buildInfo = rtMaven.run pom: 'maven-web-app/pom.xml', goals: 'clean package'
+            sh 'mvn -B clean package'
           }
       }
     }
