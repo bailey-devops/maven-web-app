@@ -2,6 +2,8 @@ pipeline {
     
     agent any
 
+    def mavenHome = tool name: "maven"
+    
     stages {
       stage ('getCode') {
           steps {
