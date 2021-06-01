@@ -13,5 +13,10 @@ pipeline {
               sh "/opt/maven/bin/mvn clean package"
           }
       }
+      stage ('codeQuality') {
+          steps {
+              sh "/opt/maven/bin/mvn sonar:sonar"
+          }
+        }
     }
 }
