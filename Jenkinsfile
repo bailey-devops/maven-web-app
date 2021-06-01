@@ -23,5 +23,15 @@ pipeline {
               sh "/opt/maven/bin/mvn deploy"
           }
         }
+      stage ('tomcatDeployment') {
+          steps {
+              
+          }
+        }
+      stage ('emailNotification') {
+          steps {
+              emailext body: 'Boa-web-app deployment information.', compressLog: true, subject: 'Boa-web-app depolyment', to: 'o.devops.bailey@gmail.com'
+          }
+        }
     }
 }
