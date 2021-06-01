@@ -2,8 +2,6 @@ pipeline {
     
     agent any
 
-    def mavenHome = tool name: "maven"
-    
     stages {
       stage ('getCode') {
           steps {
@@ -12,7 +10,7 @@ pipeline {
       }
       stage ('mavenBuild') {
           steps {
-              sh "${mavenHome}/bin/mvn clean package"
+              sh "/opt/maven/bin/mvn clean package"
           }
       }
     }
