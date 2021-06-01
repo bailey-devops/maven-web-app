@@ -1,6 +1,6 @@
 pipeline {
     
-    agent { label 'agent1-maven' }
+    agent any
 
     stages {
       stage ('getCode') {
@@ -10,7 +10,7 @@ pipeline {
       }
       stage ('mavenBuild') {
           steps {
-            sh 'mvn -B clean package'
+            sh 'mvn clean package'
           }
       }
     }
