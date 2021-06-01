@@ -12,7 +12,7 @@
 <h1 align="center">Landmark Technologies</h1>
 <h2 align="center"> Welcome to Landmark Technology.</h2>
 <hr>
-<img src="https://unsplash.com/photos/95YRwf6CNw8">
+<img src="https://unsplash.com/photos/95YRwf6CNw8.jpg">
 <p>
 	Landmark Technology is a an ideal online training  platform for DevOps and Cloud Engineers. 
 	Our training is very comprehensive. We prepare you for every aspect of the devops lifecycle. 
