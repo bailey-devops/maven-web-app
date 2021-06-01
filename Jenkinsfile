@@ -24,14 +24,11 @@ pipeline {
           }
         }
       stage ('tomcatDeployment') {
-              when {
-              expression {
-                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
-              }
-            }
-            steps {
-                sh 'make publish'
-            }
+          steps {
+              sshagent(['423b5b58-c0a3-42aa-af6e-f0affe1bad0c']) {
+                sh "scp -o StrictHostKeyChecking=no target/maven-web-app.war  ec2-user@3.239.37.156:/opt/tomcat9/webapps/" 
+                }
+          }
         }
       stage ('emailNotification') {
           steps {
