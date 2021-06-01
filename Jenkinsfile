@@ -18,5 +18,10 @@ pipeline {
               sh "/opt/maven/bin/mvn sonar:sonar"
           }
         }
+      stage ('nexusRepo') {
+          steps {
+              sh "/opt/maven/bin/mvn deploy"
+          }
+        }
     }
 }
