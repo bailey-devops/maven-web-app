@@ -10,7 +10,9 @@ pipeline {
       }
       stage ('mavenBuild') {
           steps {
-            sh 'mvn clean package'
+              environment {
+            MVN_COMMAND = "mvn clean package"
+              }
           }
       }
     }
