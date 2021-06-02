@@ -1,5 +1,5 @@
 pipeline {
-    //testing webhook
+    //testing webhook for freestyle
     agent any
 
     stages {
