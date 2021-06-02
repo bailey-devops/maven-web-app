@@ -1,5 +1,5 @@
 pipeline {
-    //this should run on slave
+    //testing webhook
     agent any
 
     stages {
