@@ -1,5 +1,5 @@
 pipeline {
-    
+    //this should run on slave
     agent any
 
     stages {
