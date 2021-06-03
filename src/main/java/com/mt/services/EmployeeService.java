@@ -19,7 +19,7 @@ public class EmployeeService {
 	@GetMapping(value = "/getEmployeeDetails")
 	@ResponseBody
 	String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
-			void foo() throws MyException {
+			throws MyException {
 
 		JSONObject js = new JSONObject();
 		js.put("Name", "Landmark Technologies");
