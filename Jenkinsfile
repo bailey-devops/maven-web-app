@@ -1,5 +1,5 @@
 pipeline {
-    
+    //testing webhook for freestyle
     agent any
 
     stages {
@@ -25,7 +25,7 @@ pipeline {
         }
       stage ('tomcatDeployment') {
           steps {
-                sh "scp -o StrictHostKeyChecking=no target/maven-web-app.war  ec2-user@3.239.37.156:/opt/tomcat9/webapps/" 
+                sh "scp -o StrictHostKeyChecking=no target/maven-web-app.war  ec2-user@3.234.225.159:/opt/tomcat9/webapps/" 
           }
         }
       stage ('emailNotification') {
