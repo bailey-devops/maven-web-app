@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@GetMapping("/employee")
+@RequestMapping("/employee")
 public class EmployeeService {
 
 	
-	@GetMapping(value = "/getEmployeeDetails")
+	@RequestMapping(value = "/getEmployeeDetails", method = RequestMethod.GET)
 	@ResponseBody
 	String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
-			throws MyException {
+			throws JASONException {
 
 		JSONObject js = new JSONObject();
 		js.put("Name", "Landmark Technologies");
