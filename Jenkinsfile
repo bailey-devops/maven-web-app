@@ -1,8 +1,8 @@
 node
  {
-  
-  def mavenHome = tool name: "maven 3.8.1"
-  
+  //tool name: "maven 3.8.1"
+  def mavenHome = "/opt/maven"
+  /*
       echo "GitHub BranhName ${env.BRANCH_NAME}"
       echo "Jenkins Job Number ${env.BUILD_NUMBER}"
       echo "Jenkins Node Name ${env.NODE_NAME}"
@@ -12,7 +12,7 @@ node
       echo "JOB Name ${env.JOB_NAME}"
   
    properties([[$class: 'JiraProjectProperty'], buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '2', daysToKeepStr: '', numToKeepStr: '2')), pipelineTriggers([pollSCM('* * * * *')])])
-  
+  */
     stage("CheckOutCodeGit")
       {
       git 'https://github.com/bailey-devops/maven-web-app.git' 
