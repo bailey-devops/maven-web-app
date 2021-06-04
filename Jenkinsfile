@@ -1,6 +1,8 @@
 pipeline {
     //testing webhook for freestyle
-    agent any
+    agent {
+        label 'mavenHome'
+        }
 
     stages {
       stage ('getCode') {
